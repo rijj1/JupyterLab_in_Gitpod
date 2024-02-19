@@ -24,7 +24,7 @@ This project provides a Docker image for running JupyterLab with remote access e
 3. Go to the 8888 port and use `rijj1` as the password.
 
 ### Method 2
-1. 1. Just run the command in the terminal:
+1. Just run the command in the terminal:
 ````bash
 docker run -it --rm -p 8888:8888 rijj1/jupyterlab:v1.0
 ````
