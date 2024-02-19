@@ -1,0 +1,9 @@
+image:
+  file: Dockerfile
+
+# Prebuild configuration
+tasks:
+  - name: Prebuild
+    command: |
+      echo "Running prebuild steps..."
+    prebuild: true
