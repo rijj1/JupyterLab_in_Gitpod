@@ -6,4 +6,6 @@ ports:
     protocol: "http"
 
 tasks:
-  - command: "echo hi"
+  - command: |
+      echo "Excluding unnecessary files..."
+      rm -rf images Dockerfile README.md jupyter_server_config.json
