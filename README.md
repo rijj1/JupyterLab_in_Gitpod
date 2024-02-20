@@ -31,4 +31,5 @@ docker run -it --rm -p 8888:8888 rijj1/jupyterlab:v1.0
 <br>
 <b>NOTE:</b>
 
-To open Jupyter Lab again run the command `jupyter lab` in the terminal
+1. To open Jupyter Lab again, run the command `jupyter lab` in the terminal
+2. To have any package preinstalled, just add it in `requirements.txt` file.
