@@ -6,9 +6,12 @@ ports:
     protocol: "http"
 
 tasks:
-  - command: |
-      echo "Excluding unnecessary files..."
-      rm -rf images Dockerfile README.md jupyter_server_config.json LICENSE
+  - init: |
+      echo "Creating and activating virtual environment..."
       python3 -m venv /workspace/JupyterLab_in_Gitpod/.venv
+      source /workspace/JupyterLab_in_Gitpod/.venv/bin/activate
+    command: |
+      echo "Excluding unnecessary files..."
+      # rm -rf images Dockerfile README.md jupyter_server_config.json LICENSE
       source /workspace/JupyterLab_in_Gitpod/.venv/bin/activate
       jupyter lab

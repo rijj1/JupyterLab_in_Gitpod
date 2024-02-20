@@ -20,14 +20,15 @@ This project provides a Docker image for running JupyterLab with remote access e
 1. Just click the button to open to run in Gitpod:<br><br>
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rijj1/JupyterLab_in_Gitpod)
 
-2. In the terminal where you have the container running, enter `jupyter lab`, and Android Studio should start in the browser tab.
-3. Go to the 8888 port and use `rijj1` as the password.
+2. Go to the 8888 port and use `rijj1` as the password.
 
 ### Method 2
 1. Just run the command in the terminal:
 ````bash
 docker run -it --rm -p 8888:8888 rijj1/jupyterlab:v1.0
 ````
-2. In the terminal where you have the container running, enter `jupyter lab`, and Android Studio should start in the browser tab.
-3. Go to the 8888 port and use `rijj1` as the password.
+2. Go to the 8888 port and use `rijj1` as the password.
+<br>
+<b>NOTE:</b>
 
+To open Jupyter Lab again run the command `jupyter lab` in the terminal
