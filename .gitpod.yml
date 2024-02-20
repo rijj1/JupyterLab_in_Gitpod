@@ -9,3 +9,4 @@ tasks:
   - command: |
       echo "Excluding unnecessary files..."
       rm -rf images Dockerfile README.md jupyter_server_config.json LICENSE
+      jupyter lab
