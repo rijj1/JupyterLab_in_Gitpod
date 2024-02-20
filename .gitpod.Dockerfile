@@ -22,9 +22,6 @@ RUN mkdir -p /home/gitpod/.jupyter
 COPY jupyter_server_config.json /home/gitpod/.jupyter/jupyter_server_config.json
 RUN chown -R gitpod:gitpod /home/gitpod/.jupyter
 
-# Activate the existing virtual environment
-RUN echo "source /workspace/JupyterLab_in_Gitpod/.venv/bin/activate" >> /home/gitpod/.bashrc
-
 # Switch back to the gitpod user
 USER gitpod
 RUN echo "c.ServerApp.allow_remote_access = True" > /home/gitpod/.jupyter/jupyter_notebook_config.py
