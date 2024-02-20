@@ -26,10 +26,12 @@ EXPOSE 8888
 # Create a custom Jupyter configuration directory
 RUN mkdir -p /home/gitpod/.jupyter
 
+USER root
 # Copy your jupyter_server_config.json to /home/gitpod/.jupyter/ and set permissions
 COPY jupyter_server_config.json /home/gitpod/.jupyter/jupyter_server_config.json
 RUN chown -R gitpod:gitpod /home/gitpod/.jupyter
 
+USER gitpod
 RUN echo "c.ServerApp.allow_remote_access = True" > /home/gitpod/.jupyter/jupyter_notebook_config.py
 
 # Set the default command to start JupyterLab
