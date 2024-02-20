@@ -18,7 +18,7 @@ ENV PATH="/workspace/venv/bin:$PATH"
 RUN echo "source /workspace/venv/bin/activate" >> /home/gitpod/.bashrc
 
 # Install JupyterLab
-RUN pip3 install jupyterlab
+RUN /workspace/venv/bin/pip install jupyterlab
 
 # Expose the JupyterLab port
 EXPOSE 8888
@@ -35,4 +35,4 @@ USER gitpod
 RUN echo "c.ServerApp.allow_remote_access = True" > /home/gitpod/.jupyter/jupyter_notebook_config.py
 
 # Set the default command to start JupyterLab
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+CMD ["/workspace/venv/bin/jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
