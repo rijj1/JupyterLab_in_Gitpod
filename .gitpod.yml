@@ -9,4 +9,6 @@ tasks:
   - command: |
       echo "Excluding unnecessary files..."
       rm -rf images Dockerfile README.md jupyter_server_config.json LICENSE
+      python3 -m venv /workspace/JupyterLab_in_Gitpod/.venv
+      source /workspace/JupyterLab_in_Gitpod/.venv/bin/activate
       jupyter lab
